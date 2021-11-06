@@ -104,6 +104,8 @@ fun startGameLoop() {
     while (true) {
         turn = !turn
 
+        printBoard()
+
         var nextMove: Int
         // player's turn
         if (turn) {
@@ -127,13 +129,12 @@ fun startGameLoop() {
             false -> PLAYER_2
         }
 
-        printBoard()
-
         // check for winner and draw
         val winner = getWinner()
         if (winner != null) {
             if(winner == EMPTY) println("draw!")
             else println((if (winner == 1) "player 1" else "player 2") + " has won!")
+            printBoard()
             break
         }
     }

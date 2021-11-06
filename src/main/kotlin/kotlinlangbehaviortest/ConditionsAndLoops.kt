@@ -1,7 +1,7 @@
 package kotlinlangbehaviortest
 
 // reference:
-// 1. official document: https://kotlinlang.org/docs/control-flow.html
+// official documentation: https://kotlinlang.org/docs/control-flow.html
 
 fun main() {
     println(IfElseTester.ifAsExpression(true))
